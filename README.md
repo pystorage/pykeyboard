@@ -1,10 +1,10 @@
-<center>
+<p align="center">
 <img src="https://raw.githubusercontent.com/pystorage/pykeyboard/master/docs/source/images/logo.png" alt="Pykeyboard">
+</p>
 
 ![PyPI](https://img.shields.io/pypi/v/pykeyboard)
 [![Downloads](https://pepy.tech/badge/pykeyboard)](https://pepy.tech/project/pykeyboard)
 ![GitHub](https://img.shields.io/github/license/pystorage/pykeyboard)
-</center>
 
 ## Installation
 
