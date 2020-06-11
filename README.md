@@ -147,7 +147,7 @@ from pykeyboard import InlinePaginationKeyboard
 
 - count_pages (integer)
 - current_page (integer)
-- callback_pattern (string) - use of the <mark>{number} pattern is <ins>required</ins></mark>
+- callback_pattern (string) - use of the `{number} pattern is <ins>required</ins>`
 
 #### Pagination 3 pages
 
