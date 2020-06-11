@@ -6,6 +6,7 @@
 ![PyPI](https://img.shields.io/pypi/v/pykeyboard)
 [![Downloads](https://pepy.tech/badge/pykeyboard)](https://pepy.tech/project/pykeyboard)
 ![GitHub](https://img.shields.io/github/license/pystorage/pykeyboard)
+
 </div>
 
 ## Installation
@@ -21,6 +22,10 @@ pip install pykeyboard
 ```python
 from pykeyboard import InlineKeyboard
 ```
+
+#### Parameters:
+
+- row_width (integer, default 3)
 
 #### Inline Keyboard add buttons
 
@@ -79,6 +84,13 @@ keyboard.row(
 from pykeyboard import ReplyKeyboard
 ```
 
+#### Parameters:
+
+- resize_keyboard (bool, optional)
+- one_time_keyboard (bool, optional)
+- selective (bool, optional)
+- row_width (integer, default 3)
+
 #### Reply Keyboard add buttons
 
 ##### Code
@@ -130,6 +142,12 @@ keyboard.row(KeyboardButton('5', 'reply_keyboard#5'))
 ```python
 from pykeyboard import InlinePaginationKeyboard
 ```
+
+#### Parameters:
+
+- count_pages (integer)
+- current_page (integer)
+- callback_pattern (string) - use of the <mark>{number} pattern is <ins>required</ins></mark>
 
 #### Pagination 3 pages
 
