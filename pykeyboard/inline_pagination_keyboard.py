@@ -39,7 +39,7 @@ class InlinePaginationKeyboard(InlineKeyboardMarkup):
         ]
 
     @property
-    def middle__pagination(self):
+    def middle_pagination(self):
         return [
             self.add_button(
                 self.SYMBOL_FIRST_PAGE.format(1), 1),
@@ -91,7 +91,7 @@ class InlinePaginationKeyboard(InlineKeyboardMarkup):
             elif self.current_page > self.count_pages - 3:
                 return self.right_pagination
             else:
-                return self.middle__pagination
+                return self.middle_pagination
 
     def row(self, *args):
         self.inline_keyboard.append([button for button in args])
