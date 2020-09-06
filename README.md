@@ -33,7 +33,7 @@ from pykeyboard import InlineKeyboard
 
 ```python
 from pykeyboard import InlineKeyboard
-from pyrogram import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton
 
 
 keyboard = InlineKeyboard(row_width=3)
@@ -58,7 +58,7 @@ keyboard.add(
 
 ```python
 from pykeyboard import InlineKeyboard
-from pyrogram import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton
 
 
 keyboard = InlineKeyboard()
@@ -97,7 +97,7 @@ from pykeyboard import ReplyKeyboard
 
 ```python
 from pykeyboard import ReplyKeyboard
-from pyrogram import KeyboardButton
+from pyrogram.types import KeyboardButton
 
 
 keyboard = ReplyKeyboard(row_width=3)
@@ -120,7 +120,7 @@ keyboard.add(
 
 ```python
 from pykeyboard import ReplyKeyboard
-from pyrogram import KeyboardButton
+from pyrogram.types import KeyboardButton
 
 
 keyboard = ReplyKeyboard()
@@ -230,7 +230,7 @@ keyboard = InlinePaginationKeyboard(100, 100, 'pagination_keyboard#{number}')
 
 ```python
 from pykeyboard import InlinePaginationKeyboard
-from pyrogram import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton
 
 
 keyboard = InlinePaginationKeyboard(150, 123, 'pagination_keyboard#{number}')
