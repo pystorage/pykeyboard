@@ -1,4 +1,4 @@
-from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 class InlinePaginationKeyboard(InlineKeyboardMarkup):

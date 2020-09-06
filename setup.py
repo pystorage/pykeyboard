@@ -8,7 +8,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='pykeyboard',
-    version='0.1.0',
+    version='0.1.1',
     author='PyMaster',
     author_email='',
     description='Best Keyboard and Pagination for the Pyrogram Library.',

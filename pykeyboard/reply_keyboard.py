@@ -1,4 +1,4 @@
-from pyrogram import ReplyKeyboardMarkup
+from pyrogram.types import ReplyKeyboardMarkup
 
 
 class ReplyKeyboard(ReplyKeyboardMarkup):
