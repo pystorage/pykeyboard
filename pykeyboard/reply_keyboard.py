@@ -2,21 +2,21 @@ from pyrogram.types import ReplyKeyboardMarkup
 
 
 class ReplyKeyboard(ReplyKeyboardMarkup):
-    def __init__(self, resize_keyboard=None, one_time_keyboard=None,
-                 selective=None, row_width=3):
-        self.keyboard = list()
+    def __init__(
+        self, resize_keyboard=None, one_time_keyboard=None, selective=None, row_width=3
+    ):
+        self.keyboard = []
         super().__init__(
             keyboard=self.keyboard,
             resize_keyboard=resize_keyboard,
             one_time_keyboard=one_time_keyboard,
-            selective=selective
+            selective=selective,
         )
         self.row_width = row_width
 
     def add(self, *args):
         self.keyboard = [
-            args[i:i + self.row_width]
-            for i in range(0, len(args), self.row_width)
+            args[i : i + self.row_width] for i in range(0, len(args), self.row_width)
         ]
 
     def row(self, *args):
