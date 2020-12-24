@@ -1,4 +1,4 @@
-from pyrogram.types import InlineQueryResultArticle,InputTextMessageContent,InlineQueryResult
+from pyrogram.types import InlineQueryResultArticle,InputTextMessageContent
 from uuid import uuid4
 
 class InlineQueryResults(list):
