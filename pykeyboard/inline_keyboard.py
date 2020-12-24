@@ -8,8 +8,9 @@ class InlineKeyboard(InlineKeyboardMarkup):
         self.row_width = row_width
 
     def add(self, *args):
+        checkType = lambda element : True if type(element).__name__ == "InlineKeyboardButton" else False
         self.inline_keyboard = [
-            args[i:i + self.row_width]
+            list(filter(checkType,list(args[i:i + self.row_width])))
             for i in range(0, len(args), self.row_width)
         ]
 
