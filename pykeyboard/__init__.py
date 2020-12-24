@@ -7,3 +7,5 @@ __copyright__ = 'Copyright 2020 PyMaster'
 from .inline_keyboard import InlineKeyboard
 from .inline_pagination_keyboard import InlinePaginationKeyboard
 from .reply_keyboard import ReplyKeyboard
+from .inline_query_results import InlineQueryResults
+
