@@ -243,3 +243,29 @@ keyboard.row(
 ##### Result
 
 <p><img src="https://raw.githubusercontent.com/pystorage/pykeyboard/master/docs/source/images/pagination_keyboard_150.png" alt="pagination_keyboard_150"></p>
+
+#### Inline Query Results
+
+##### Code
+
+```python
+from pykeyboard import InlineQueryResults
+
+results = InlineQueryResults()
+results.add(
+            title="Hello, this is a test!",
+            message_text="This is the message to send",
+            description="Hello, World!",
+        )
+results.add(
+            title="Hello, this is another test!",
+            message_text="This is the message to send",
+            description="Hello, GitHub!",
+            url = "https://docs.pyrogram.org/"
+        )
+
+await inline_query.answer(
+            results=results,
+            cache_time=1,
+        )
+```
