@@ -1,4 +1,5 @@
-from pyrogram.types import ReplyKeyboardMarkup
+from pyrogram.types import (
+    ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove, ForceReply)
 
 
 class ReplyKeyboard(ReplyKeyboardMarkup):
@@ -21,3 +22,22 @@ class ReplyKeyboard(ReplyKeyboardMarkup):
 
     def row(self, *args):
         self.keyboard.append([button for button in args])
+
+
+class ReplyButton(KeyboardButton):
+    def __init__(self, text=None, request_contact=None, request_location=None):
+        super().__init__(
+            text=text,
+            request_contact=request_contact,
+            request_location=request_location
+        )
+
+
+class ReplyKeyboardRemove(ReplyKeyboardRemove):
+    def __init__(self, selective=None):
+        super().__init__(selective=selective)
+
+
+class ForceReply(ForceReply):
+    def __init__(self, selective=None):
+        super().__init__(selective=selective)

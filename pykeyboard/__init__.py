@@ -1,11 +1,10 @@
 __title__ = 'pykeyboard'
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 __author__ = 'PyMaster'
 __license__ = 'MIT License'
-__copyright__ = 'Copyright 2020 PyMaster'
+__copyright__ = 'Copyright 2020-2022 PyMaster'
 
-from .inline_keyboard import InlineKeyboard
-from .inline_pagination_keyboard import InlinePaginationKeyboard
-from .reply_keyboard import ReplyKeyboard
-from .inline_query_results import InlineQueryResults
-
+from .inline_keyboard import InlineKeyboard, InlineButton
+from .inline_pagination_keyboard import InlinePaginationKeyboard, InlineButton
+from .reply_keyboard import (
+    ReplyKeyboard, ReplyButton, ReplyKeyboardRemove, ForceReply)
