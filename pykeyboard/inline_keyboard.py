@@ -1,4 +1,6 @@
+from pyrogram.emoji import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from typing import List, Union
 
 
 class InlineKeyboard(InlineKeyboardMarkup):
@@ -7,6 +9,23 @@ class InlineKeyboard(InlineKeyboardMarkup):
     _SYMBOL_CURRENT_PAGE = '· {} ·'
     _SYMBOL_NEXT_PAGE = '{} ›'
     _SYMBOL_LAST_PAGE = '{} »'
+    _LOCALES = {
+        'be_BY': f'{FLAG_BELARUS} Беларуская',          # Belarusian - Belarus
+        'de_DE': f'{FLAG_GERMANY} Deutsch',             # German - Germany
+        'zh_CN': f'{FLAG_CHINA} 中文',                  # Chinese - China
+        # English - United States
+        'en_US': f'{FLAG_UNITED_KINGDOM}  English',
+        'fr_FR': f'{FLAG_FRANCE} Français',             # French - France
+        # Indonesian - Indonesia
+        'id_ID': f'{FLAG_INDONESIA} Bahasa Indonesia',
+        'it_IT': f'{FLAG_ITALY} Italiano',              # Italian - Italy
+        'ko_KR': f'{FLAG_SOUTH_KOREA} 한국어',          # Korean - Korea
+        'tr_TR': f'{FLAG_TURKEY} Türkçe',               # Turkish - Turkey
+        'ru_RU': f'{FLAG_RUSSIA} Русский',              # Russian - Russia
+        'es_ES': f'{FLAG_SPAIN} Español',               # Spanish - Spain
+        'uk_UA': f'{FLAG_UKRAINE} Українська',          # Ukrainian - Ukraine
+        'uz_UZ': f'{FLAG_UZBEKISTAN} Oʻzbekcha',        # Uzbek - Uzbekistan
+    }
 
     def __init__(self, row_width=3):
         self.inline_keyboard = list()
@@ -105,6 +124,23 @@ class InlineKeyboard(InlineKeyboardMarkup):
         self.callback_pattern = callback_pattern
 
         return self.inline_keyboard.append(self._build_pagination)
+
+    def languages(self, callback_pattern: str, locales: Union[str, List[str]],
+                  row_width: int = 2):
+        locales = locales if isinstance(locales, list) else [locales]
+
+        buttons = [
+            InlineKeyboardButton(
+                text=self._LOCALES.get(locales[i], 'Invalid locale'),
+                callback_data=callback_pattern.format(locale=locales[i])
+            )
+            for i in range(0, len(locales))
+        ]
+
+        self.inline_keyboard = [
+            buttons[i:i + row_width]
+            for i in range(0, len(buttons), row_width)
+        ]
 
 
 class InlineButton(InlineKeyboardButton):

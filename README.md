@@ -23,14 +23,16 @@
       - [Pagination 9 pages](#pagination-9-pages)
       - [Pagination 100 pages](#pagination-100-pages)
       - [Pagination 150 pages and buttons](#pagination-150-pages-and-buttons)
+    - [<b>Languages inline keyboard</b>](#languages-inline-keyboard)
   - [<b>Reply Keyboard</b>](#reply-keyboard)
     - [Reply Keyboard add buttons](#reply-keyboard-add-buttons)
     - [Reply Keyboard row buttons](#reply-keyboard-row-buttons)
 
 # What's new?
 
-- Added a new method to <b>InlineKeyboard</b> for working with <ins>pagination</ins>. The <b>InlinePaginationKeyboard</b> class will be removed in a future version.
+- Added a new method to <b>InlineKeyboard</b> for working with <a href="#pagination-inline-keyboard"><ins>pagination</ins></a>. The <b>InlinePaginationKeyboard</b> class will be removed in a future version.
 - Overriding the <b>KeyboardButton</b>, <b>ReplyKeyboardRemove</b>, <b>ForceReply</b>, <b>InlineKeyboardButton</b> methods in <b>ReplyButton</b>, <b>ReplyKeyboardRemove</b>, <b>ForceReply</b>, <b>InlineButton</b>.
+- Added new method <b>InlineKeyboard</b>. To send language <a href="#languages-inline-keyboard"><ins>selection keyboard</ins></a>.
 
 # Installation
 
@@ -189,6 +191,48 @@ keyboard.row(
 #### Result
 
 <p><img src="https://raw.githubusercontent.com/pystorage/pykeyboard/master/docs/source/images/pagination_keyboard_150.png" alt="pagination_keyboard_150"></p>
+
+### Languages inline keyboard
+
+```python
+from pykeyboard import InlineKeyboard
+```
+
+#### Parameters:
+
+- callback_pattern (string) - use of the `{locale}` pattern is <ins>required</ins>
+- locales (string | list) - list of language codes
+  - be_BY - Belarusian
+  - de_DE - German
+  - zh_CN - Chinese
+  - en_US - English
+  - fr_FR - French
+  - id_ID - Indonesian
+  - it_IT - Italian
+  - ko_KR - Korean
+  - tr_TR - Turkish
+  - ru_RU - Russian
+  - es_ES - Spanish
+  - uk_UA - Ukrainian
+  - uz_UZ - Uzbek
+- row_width (integer, default 2)
+<p>P.S. To add new languages, write to me in <a href="https://t.me/pymaster">@PyMaster</a> telegram.</p>
+
+#### Code
+
+```python
+from pykeyboard import InlineKeyboard
+
+
+keyboard = InlineKeyboard(row_width=3)
+keyboard.languages(
+    'languages:{locale}', ['en_US', 'ru_RU', 'id_ID'], 2
+)
+```
+
+#### Result
+
+<p><img src="https://raw.githubusercontent.com/pystorage/pykeyboard/master/docs/source/images/languages_keyboard.png" alt="languages_keyboard"></p>
 
 ## Reply Keyboard
 
