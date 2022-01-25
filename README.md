@@ -7,6 +7,8 @@
 [![Downloads](https://pepy.tech/badge/pykeyboard)](https://pepy.tech/project/pykeyboard)
 ![GitHub](https://img.shields.io/github/license/pystorage/pykeyboard)
 
+ <p><h2>🎉Thank you for <font color="orange">100k downloads</font>🎉 I love you...🥰</h2></p>
+
 </div>
 
 # Pykeyboard
