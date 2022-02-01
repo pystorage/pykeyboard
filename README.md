@@ -7,7 +7,7 @@
 [![Downloads](https://pepy.tech/badge/pykeyboard)](https://pepy.tech/project/pykeyboard)
 ![GitHub](https://img.shields.io/github/license/pystorage/pykeyboard)
 
- <p><h2>🎉Thank you for <font color="orange">100k downloads</font>🎉 I love you...🥰</h2></p>
+ <p><h2>🎉 Thank you for 100k downloads 🎉 I love you...🥰</h2></p>
 
 </div>
 
@@ -32,9 +32,9 @@
 
 # What's new?
 
-- Added a new method to <b>InlineKeyboard</b> for working with <a href="#pagination-inline-keyboard"><ins>pagination</ins></a>. The <b>InlinePaginationKeyboard</b> class will be removed in a future version.
 - Overriding the <b>KeyboardButton</b>, <b>ReplyKeyboardRemove</b>, <b>ForceReply</b>, <b>InlineKeyboardButton</b> methods in <b>ReplyButton</b>, <b>ReplyKeyboardRemove</b>, <b>ForceReply</b>, <b>InlineButton</b>.
-- Added new method <b>InlineKeyboard</b>. To send language <a href="#languages-inline-keyboard"><ins>selection keyboard</ins></a>.
+- Added new method <b>InlineKeyboard</b>. To send <a href="#languages-inline-keyboard"><ins>language selection keyboard</ins></a>.
+- Minor changes due to update in Pyrogram.
 
 # Installation
 

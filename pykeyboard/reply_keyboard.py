@@ -4,13 +4,14 @@ from pyrogram.types import (
 
 class ReplyKeyboard(ReplyKeyboardMarkup):
     def __init__(self, resize_keyboard=None, one_time_keyboard=None,
-                 selective=None, row_width=3):
+                 selective=None, placeholder=None, row_width=3):
         self.keyboard = list()
         super().__init__(
             keyboard=self.keyboard,
             resize_keyboard=resize_keyboard,
             one_time_keyboard=one_time_keyboard,
-            selective=selective
+            selective=selective,
+            placeholder=placeholder
         )
         self.row_width = row_width
 
@@ -39,5 +40,5 @@ class ReplyKeyboardRemove(ReplyKeyboardRemove):
 
 
 class ForceReply(ForceReply):
-    def __init__(self, selective=None):
-        super().__init__(selective=selective)
+    def __init__(self, selective=None, placeholder=None):
+        super().__init__(selective=selective, placeholder=placeholder)
