@@ -7,7 +7,7 @@
 [![Downloads](https://pepy.tech/badge/pykeyboard)](https://pepy.tech/project/pykeyboard)
 ![GitHub](https://img.shields.io/github/license/pystorage/pykeyboard)
 
- <p><h2>🎉 Thank you for 100k downloads 🎉 I love you...🥰</h2></p>
+ <p><h2>🎉 Thank you for 200k downloads 🎉 I love you...🥰</h2></p>
 
 </div>
 
